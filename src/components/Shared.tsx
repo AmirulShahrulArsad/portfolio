@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { profile } from "@/data/profile";
+import { SocialLinks } from "./Layout";
 import { Reveal } from "./Reveal";
 export function Button({
   href,
@@ -19,8 +20,8 @@ export function Button({
       href={href}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
-      {children}
-      <ArrowUpRight size={17} />
+      <span>{children}</span>
+      <ArrowRight size={18} />
     </Link>
   );
 }
@@ -57,34 +58,49 @@ export function Heading({
 }
 export function ContactCTA() {
   return (
-    <section className="contact-cta">
-      <div className="container">
-        <Reveal>
-          <p className="eyebrow">NEXT CHAPTER</p>
+    <section className="container contact-cta">
+      <Reveal className="contact-panel glass">
+        <div className="contact-title">
+          <p className="eyebrow">THE NEXT CHAPTER</p>
           <h2>
-            Let’s create something
+            Let’s create
             <br />
-            <span className="serif">meaningful.</span>
+            <span>
+              something
+              <br />
+              meaningful.
+            </span>
           </h2>
-          <div className="cta-bottom">
-            <p>
-              I’m interested in opportunities where I can
-              <br className="desktop-break" /> contribute, learn, and grow in
-              digital marketing.
-            </p>
-            <div className="actions">
-              <Button href="/contact">Get in Touch</Button>
-              <Button href={profile.linkedin} secondary external>
-                Connect on LinkedIn
-              </Button>
-            </div>
-          </div>
-          <div className="contact-meta">
-            <a href={"mailto:" + profile.email}>{profile.email}</a>
-            <span>{profile.location}</span>
-          </div>
-        </Reveal>
-      </div>
+        </div>
+        <div className="contact-message">
+          <p>
+            I’m interested in opportunities where I can contribute, learn, and
+            grow in digital marketing.
+          </p>
+          <Button href="/contact">
+            <Mail size={18} />
+            Get in Touch
+          </Button>
+          <a className="contact-email" href={"mailto:" + profile.email}>
+            {profile.email}
+          </a>
+        </div>
+        <div className="contact-social">
+          <p>Find me on</p>
+          <SocialLinks />
+          <span>{profile.location}</span>
+        </div>
+        <p className="hand-note contact-note" aria-hidden="true">
+          Creative ideas.
+          <br />
+          Thoughtful
+          <br />
+          execution.
+          <svg viewBox="0 0 100 25">
+            <path d="M4 19Q47 3 93 8" />
+          </svg>
+        </p>
+      </Reveal>
     </section>
   );
 }

@@ -1,16 +1,27 @@
-# Verification
+# Verification — green portfolio redesign
 
-Completed on 14 October 2026 using Node.js 24.19.0, Next.js 16.4.0 and React 19.3.0.
+Verified on 14 October 2026 using Node.js 24.19.0, Next.js 16.4.0, and React 19.3.0.
+
+## Completed checks
 
 - `npm run lint`: passed with no errors or warnings.
 - `npm run typecheck`: passed.
-- `npm run build`: passed; all seven case-study routes statically generated.
-- Headless Chromium: 48 route/viewport checks passed (12 pages × widths 375, 768, 1024, 1440). Each returned HTTP 200, had one H1, no horizontal document overflow, and no broken loaded images.
-- Work filters: All Work (7), Technical Projects (3), Digital Advertising (1) passed.
-- Gallery: opening, right-arrow image navigation, Escape closing passed.
-- Mobile navigation: opened, navigated to About, and closed after its exit animation.
+- `npm run build`: passed; all seven case studies statically generated.
+- Chromium against the production static export: 48 route/viewport checks passed (12 pages × widths 375, 768, 1024, 1440). Successful HTTP responses, one H1 per page, no horizontal document overflow, no page errors.
+- Filters: All Work (7), Technical Projects (3), Digital Advertising (1) passed.
+- Gallery: opening, right-arrow navigation, Escape closing passed using blank image slots.
+- Mobile navigation: opening, navigating to About, and closing after the exit animation passed.
+- Skills navigation: reaches the homepage toolkit from About at all four viewport widths.
 - Homepage internal link targets returned successful responses.
-- Reduced-motion media preference disabled smooth scrolling; animation components use Motion's reduced-motion hook.
-- No browser page errors recorded.
+- Full toolkit: Enter expands the native details element; the supplied tools remain accessible.
+- Blank images: all seven homepage project cards use empty image areas; no project images are rendered.
+- Reduced-motion preference: disables smooth scrolling and floating sphere animations. Motion reveals and filter/menu transitions also honor this preference.
+- Progressive enhancement: homepage work content remains visible with JavaScript disabled.
+- Axe-core WCAG 2 A/AA and 2.1 AA scans: zero violations on Home, About, Work, Experience, Contact, and the campaign landing-page case study.
+- Desktop and mobile screenshots visually reviewed.
 
-Limits: no automated accessibility audit or screen-reader audit; external social URLs were checked against the supplied brief rather than authenticated accounts. Missing client screenshots and resume remain explicit placeholders/omissions. No production deployment was performed: the Sites publishing scripts were not installed in this environment, and no connected Vercel deployment capability was available. Configure the real production origin before deployment for the sitemap and absolute metadata.
+## Scope and limits
+
+The supplied green template and all six provided palette colours guided the redesign. Portrait and project-image regions are deliberately blank. Decorative ribbon geometry and spheres are SVG/CSS, not fabricated work images. Personal information, project responsibilities, pending-content notes, and documented recognition are retained.
+
+Automated accessibility checks do not replace a manual screen-reader audit. External social URLs were matched to the supplied brief rather than authenticated profiles. The actual resume PDF has not been provided, so no download button is displayed. This change is prepared for Vercel and runs locally; no hosting deployment was performed. Set the real `NEXT_PUBLIC_SITE_URL` before deployment for the sitemap and absolute metadata.

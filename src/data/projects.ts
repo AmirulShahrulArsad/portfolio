@@ -44,14 +44,14 @@ export const projects: Project[] = [
     process: ["Pending content — a verified project workflow will be added."],
     gallery: [
       {
-        src: "/images/work/paid-advertising-support.svg",
-        alt: "Illustrative cover for Paid Advertising & Campaign Support; not an actual project screenshot.",
-        caption: "Illustrative cover · project screenshot pending",
+        src: "",
+        alt: "Blank image placeholder for Paid Advertising & Campaign Support.",
+        caption: "Project image pending",
       },
       {
-        src: "/images/work/paid-advertising-support.svg",
+        src: "",
         alt: "Additional project material placeholder",
-        caption: "Additional approved visual material pending",
+        caption: "Additional approved image pending",
       },
     ],
     outcomes: ["Pending content — verified outcomes have not been supplied."],
@@ -88,14 +88,14 @@ export const projects: Project[] = [
     process: ["Pending content — a verified project workflow will be added."],
     gallery: [
       {
-        src: "/images/work/marketing-analytics-tracking.svg",
-        alt: "Illustrative cover for Marketing Analytics & Conversion Tracking; not an actual project screenshot.",
-        caption: "Illustrative cover · project screenshot pending",
+        src: "",
+        alt: "Blank image placeholder for Marketing Analytics & Conversion Tracking.",
+        caption: "Project image pending",
       },
       {
-        src: "/images/work/marketing-analytics-tracking.svg",
+        src: "",
         alt: "Additional project material placeholder",
-        caption: "Additional approved visual material pending",
+        caption: "Additional approved image pending",
       },
     ],
     outcomes: ["Pending content — verified outcomes have not been supplied."],
@@ -127,22 +127,22 @@ export const projects: Project[] = [
     process: ["Pending content — a verified project workflow will be added."],
     gallery: [
       {
-        src: "/images/work/campaign-landing-pages.svg",
-        alt: "Illustrative cover for Campaign Landing Page Development; not an actual project screenshot.",
-        caption: "Illustrative cover · project screenshot pending",
+        src: "",
+        alt: "Blank image placeholder for Campaign Landing Page Development.",
+        caption: "Project image pending",
       },
       {
-        src: "/images/work/campaign-landing-pages.svg",
+        src: "",
         alt: "Puma screenshot placeholder",
         caption: "Puma · approved screenshot pending",
       },
       {
-        src: "/images/work/campaign-landing-pages.svg",
+        src: "",
         alt: "Safi screenshot placeholder",
         caption: "Safi · approved screenshot pending",
       },
       {
-        src: "/images/work/campaign-landing-pages.svg",
+        src: "",
         alt: "PTTI screenshot placeholder",
         caption: "PTTI · approved screenshot pending",
       },
@@ -175,14 +175,14 @@ export const projects: Project[] = [
     process: ["Pending content — a verified project workflow will be added."],
     gallery: [
       {
-        src: "/images/work/ads-dashboard-automation.svg",
-        alt: "Illustrative cover for Ads Dashboard & Reporting Automation; not an actual project screenshot.",
-        caption: "Illustrative cover · project screenshot pending",
+        src: "",
+        alt: "Blank image placeholder for Ads Dashboard & Reporting Automation.",
+        caption: "Project image pending",
       },
       {
-        src: "/images/work/ads-dashboard-automation.svg",
+        src: "",
         alt: "Additional project material placeholder",
-        caption: "Additional approved visual material pending",
+        caption: "Additional approved image pending",
       },
     ],
     outcomes: ["Pending content — verified outcomes have not been supplied."],
@@ -214,14 +214,14 @@ export const projects: Project[] = [
     process: ["Pending content — a verified project workflow will be added."],
     gallery: [
       {
-        src: "/images/work/stepwise.svg",
-        alt: "Illustrative cover for StepWise — AI-Based Dance Posture Analysis; not an actual project screenshot.",
-        caption: "Illustrative cover · project screenshot pending",
+        src: "",
+        alt: "Blank image placeholder for StepWise — AI-Based Dance Posture Analysis.",
+        caption: "Project image pending",
       },
       {
-        src: "/images/work/stepwise.svg",
+        src: "",
         alt: "Additional project material placeholder",
-        caption: "Additional approved visual material pending",
+        caption: "Additional approved image pending",
       },
     ],
     outcomes: ["Best Presenter, Ie-RIICH 12th, 2026."],
@@ -251,14 +251,14 @@ export const projects: Project[] = [
     process: ["Pending content — a verified project workflow will be added."],
     gallery: [
       {
-        src: "/images/work/kolejku.svg",
-        alt: "Illustrative cover for KolejKu — Student College Application System; not an actual project screenshot.",
-        caption: "Illustrative cover · project screenshot pending",
+        src: "",
+        alt: "Blank image placeholder for KolejKu — Student College Application System.",
+        caption: "Project image pending",
       },
       {
-        src: "/images/work/kolejku.svg",
+        src: "",
         alt: "Additional project material placeholder",
-        caption: "Additional approved visual material pending",
+        caption: "Additional approved image pending",
       },
     ],
     outcomes: ["Pending content — verified outcomes have not been supplied."],
@@ -289,14 +289,14 @@ export const projects: Project[] = [
     process: ["Pending content — a verified project workflow will be added."],
     gallery: [
       {
-        src: "/images/work/software-process-management.svg",
-        alt: "Illustrative cover for Software Process Management Project; not an actual project screenshot.",
-        caption: "Illustrative cover · project screenshot pending",
+        src: "",
+        alt: "Blank image placeholder for Software Process Management Project.",
+        caption: "Project image pending",
       },
       {
-        src: "/images/work/software-process-management.svg",
+        src: "",
         alt: "Additional project material placeholder",
-        caption: "Additional approved visual material pending",
+        caption: "Additional approved image pending",
       },
     ],
     outcomes: ["Pending content — verified outcomes have not been supplied."],

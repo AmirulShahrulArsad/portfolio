@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import { Visual } from "./Visual";
 import { useState, useRef, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight, Expand } from "lucide-react";
 import type { Project } from "@/data/projects";
@@ -32,7 +32,7 @@ export function ProjectGallery({ images }: { images: Project["gallery"] }) {
                 closeButton.current?.focus();
               }}
             >
-              <Image src={im.src} alt={im.alt} width={900} height={540} />
+              <Visual src={im.src} alt={im.alt} />
               <Expand size={20} />
             </button>
             <figcaption>{im.caption}</figcaption>
@@ -56,12 +56,7 @@ export function ProjectGallery({ images }: { images: Project["gallery"] }) {
           >
             <X />
           </button>
-          <Image
-            src={images[index].src}
-            alt={images[index].alt}
-            width={1350}
-            height={810}
-          />
+          <Visual src={images[index].src} alt={images[index].alt} />
           <div className="lightbox-controls">
             <button
               aria-label="Previous image"

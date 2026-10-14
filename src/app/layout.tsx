@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import "@fontsource-variable/manrope";
+import "@fontsource-variable/caveat";
 import "./globals.css";
+import { Backdrop } from "@/components/Backdrop";
 import { Navbar, Footer } from "@/components/Layout";
 export const metadata: Metadata = {
   ...(process.env.NEXT_PUBLIC_SITE_URL
@@ -29,6 +32,7 @@ export default function RootLayout({
         <a className="skip-link" href="#main">
           Skip to content
         </a>
+        <Backdrop />
         <Navbar />
         <main id="main">{children}</main>
         <Footer />

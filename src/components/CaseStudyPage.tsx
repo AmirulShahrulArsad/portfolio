@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Visual } from "./Visual";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { projects, type Project } from "@/data/projects";
@@ -20,16 +20,10 @@ export function CaseStudyPage({ project: p }: { project: Project }) {
         </p>
         <h1>{p.title}</h1>
         <div className="case-cover">
-          <Image
-            src={p.gallery[0].src}
-            alt={p.gallery[0].alt}
-            width={1440}
-            height={864}
-            priority
-          />
+          <Visual src={p.gallery[0].src} alt={p.gallery[0].alt} priority />
         </div>
         <p className="caption">
-          Illustrative cover · actual project materials pending
+          Project image pending · approved materials to be added
         </p>
       </Reveal>
       <div className="case-overview">
@@ -81,8 +75,8 @@ export function CaseStudyPage({ project: p }: { project: Project }) {
         <p className="eyebrow">PROJECT MATERIALS</p>
         <h2>A closer look.</h2>
         <p className="muted">
-          Approved screenshots have not been provided. These are labeled
-          placeholders, not evidence of campaign results.
+          Approved screenshots have not been provided. Image areas are left
+          blank until approved materials are available.
         </p>
         <ProjectGallery images={p.gallery} />
       </section>

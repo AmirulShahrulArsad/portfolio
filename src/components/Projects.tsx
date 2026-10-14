@@ -1,39 +1,51 @@
 "use client";
-import Image from "next/image";
+import { Visual } from "./Visual";
 import Link from "next/link";
 import { useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { projects, type Project } from "@/data/projects";
-export function ProjectCard({ project: p }: { project: Project }) {
+export function ProjectCard({
+  project: p,
+  compact = false,
+}: {
+  project: Project;
+  compact?: boolean;
+}) {
   return (
-    <article className="project-card">
+    <article
+      className={"project-card " + (compact ? "compact-card" : "detailed-card")}
+    >
       <Link href={"/work/" + p.slug} aria-label={"View " + p.title}>
         <div className="project-image">
-          <Image
-            src={p.gallery[0].src}
-            alt={p.gallery[0].alt}
-            width={900}
-            height={540}
-            sizes="(max-width: 767px) 100vw, 50vw"
-          />
+          <Visual src={p.gallery[0].src} alt={p.gallery[0].alt} />
+          <span className="project-index">{p.id}</span>
+        </div>
+        <div className="project-caption">
+          <div>
+            <h3>{p.title}</h3>
+            <p>{p.category}</p>
+          </div>
           <span className="project-open">
-            <ArrowUpRight size={22} />
+            <ArrowRight size={17} />
           </span>
         </div>
-        <div className="project-meta">
-          <span>{p.category}</span>
-          <span>
-            {p.year} / {p.featured ? "Internship" : "Academic"}
-          </span>
-        </div>
-        <h3>{p.title}</h3>
-        <p>{p.summary}</p>
-        <div className="tags">
-          {p.tools.slice(0, 3).map((t) => (
-            <span key={t}>{t}</span>
-          ))}
-        </div>
+        {!compact && (
+          <div className="project-details">
+            <div className="project-meta">
+              <span>{p.organization}</span>
+              <span>
+                {p.year} / {p.featured ? "Internship" : "Academic"}
+              </span>
+            </div>
+            <p>{p.summary}</p>
+            <div className="tags">
+              {p.tools.slice(0, 3).map((t) => (
+                <span key={t}>{t}</span>
+              ))}
+            </div>
+          </div>
+        )}
       </Link>
     </article>
   );

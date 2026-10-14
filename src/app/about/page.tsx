@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { profile } from "@/data/profile";
 import { ContactCTA, TextLink } from "@/components/Shared";
 import { Reveal } from "@/components/Reveal";
-import { ArrowUpRight } from "lucide-react";
+
 export const metadata: Metadata = { title: "About Me" };
 export default function About() {
   return (
@@ -17,12 +17,17 @@ export default function About() {
           </h1>
           <div className="about-story">
             <div className="profile-panel">
-              <span className="profile-initials">
-                AS<span>.</span>
-              </span>
-              <p>AMIRUL SHAHRUL BIN M. ARSAD</p>
-              <span>Technology-minded. Marketing-curious.</span>
-              <ArrowUpRight size={34} />
+              <div
+                className="portrait-blank"
+                role="img"
+                aria-label="Portrait placeholder. Photo to be added."
+              >
+                <span>PHOTO TO BE ADDED</span>
+              </div>
+              <div className="profile-caption">
+                <p>AMIRUL SHAHRUL BIN M. ARSAD</p>
+                <span>Technology-minded. Marketing-curious.</span>
+              </div>
             </div>
             <div>
               <h2>
