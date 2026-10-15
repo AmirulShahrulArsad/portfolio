@@ -2860,3 +2860,19 @@ dd {
 .profile-panel-with-photo .profile-caption {
   position: relative;
 }
+
+.hero-profile-photo {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+}
+.hero-profile-photo img {
+  object-fit: cover;
+  object-position: 50% 42%;
+}
+.case-cover .visual img,
+.gallery-button .visual img,
+.lightbox .visual img {
+  object-fit: contain;
+}

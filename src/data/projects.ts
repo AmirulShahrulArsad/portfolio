@@ -214,14 +214,14 @@ export const projects: Project[] = [
     process: ["Pending content — a verified project workflow will be added."],
     gallery: [
       {
-        src: "",
-        alt: "Blank image placeholder for StepWise — AI-Based Dance Posture Analysis.",
-        caption: "Project image pending",
+        src: "/images/work/stepwise/presentation.webp",
+        alt: "StepWise final year project presentation beside the project poster",
+        caption: "StepWise — during my final year project presentation.",
       },
       {
-        src: "",
-        alt: "Additional project material placeholder",
-        caption: "Additional approved image pending",
+        src: "/images/work/stepwise/recognition.webp",
+        alt: "Award presentation photo at Ie-RIICH 2026",
+        caption: "Ie-RIICH 2026 — Best Presenter recognition.",
       },
     ],
     outcomes: ["Best Presenter, Ie-RIICH 12th, 2026."],

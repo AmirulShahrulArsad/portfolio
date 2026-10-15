@@ -23,7 +23,9 @@ export function CaseStudyPage({ project: p }: { project: Project }) {
           <Visual src={p.gallery[0].src} alt={p.gallery[0].alt} priority />
         </div>
         <p className="caption">
-          Project image pending · approved materials to be added
+          {p.gallery[0].src
+            ? p.gallery[0].caption
+            : "Project image pending · approved materials to be added"}
         </p>
       </Reveal>
       <div className="case-overview">
@@ -74,10 +76,7 @@ export function CaseStudyPage({ project: p }: { project: Project }) {
       <section className="case-gallery">
         <p className="eyebrow">PROJECT MATERIALS</p>
         <h2>A closer look.</h2>
-        <p className="muted">
-          Approved screenshots have not been provided. Image areas are left
-          blank until approved materials are available.
-        </p>
+        <p className="muted">{p.gallery.some(image => image.src) ? "Photos and project materials from my contributions." : "Image areas are left blank until approved materials are available."}</p>
         <ProjectGallery images={p.gallery} />
       </section>
       <div className="case-row">

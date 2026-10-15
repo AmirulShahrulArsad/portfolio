@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   ArrowDown,
   ArrowRight,
@@ -48,12 +49,14 @@ export default function Home() {
               </svg>
             </p>
             <div className="portrait-frame">
-              <div
-                className="portrait-blank"
-                role="img"
-                aria-label="Portrait placeholder. Photo to be added."
-              >
-                <span>PHOTO TO BE ADDED</span>
+              <div className="hero-profile-photo">
+                <Image
+                  src={profile.portrait.src}
+                  alt={profile.portrait.alt}
+                  fill
+                  preload
+                  sizes="(max-width: 767px) 340px, (max-width: 1023px) 40vw, 360px"
+                />
               </div>
               <div className="portrait-badge">
                 <span className="status-dot" />
@@ -185,7 +188,9 @@ export default function Home() {
             </Reveal>
           </div>
           <Reveal className="tools-preview" delay={0.15}>
-            <p id="toolkit" className="eyebrow">SKILLS & TOOLS</p>
+            <p id="toolkit" className="eyebrow">
+              SKILLS & TOOLS
+            </p>
             <h2>Tools I Use</h2>
             <div className="tool-tiles">
               {toolTiles.map(({ title, Icon }) => (

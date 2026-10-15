@@ -1,5 +1,9 @@
 export const profile = {
   name: "Amirul Shahrul Bin M. Arsad",
+  portrait: {
+    src: "/images/profile/portrait.webp",
+    alt: "Amirul Shahrul wearing a suit",
+  },
   aboutImage: {
     src: "/images/profile/amirul.webp",
     alt: "Group photo at a final internship presentation",

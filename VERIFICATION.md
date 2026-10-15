@@ -29,3 +29,7 @@ Automated accessibility checks do not replace a manual screen-reader audit. Exte
 ## About photo update — 15 October 2026
 
 Converted IMG_4994.HEIC to a 1600 × 1200 WebP (approximately 109 KiB). The original group photo is shown in full without cropping. Confirmed image loading and no horizontal overflow at 375, 766, and 1440px; lint, type checks, and the production build passed.
+
+## Homepage portrait and StepWise photos — 15 October 2026
+
+Added the supplied suit portrait to the homepage and the supplied final-year presentation and recognition photos to StepWise. Confirmed homepage image loading without overflow at 375, 766, and 1440px. StepWise gallery loading, keyboard next-image navigation, and Escape closing passed with no browser errors. Lint, type checks, and production build passed. Other project image areas remain blank.
