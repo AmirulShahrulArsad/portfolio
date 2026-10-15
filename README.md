@@ -24,7 +24,8 @@ The build exports all pages into `out/`. To preview the production export, use a
 ## Deploy to Vercel
 
 1. Commit the source to a Git repository and import it in Vercel.
-2. Use the repository root as the Root Directory. The root `vercel.json` supplies the Next.js preset, `npm ci` install command, `npm run build` build command, and `out` output directory. The nested `My-Portfolio-main` folder is the previous portfolio and is excluded from CLI uploads.
+2. Use the repository root as the Root Directory. The root `vercel.json` supplies the Next.js preset, `npm ci` install command, `npm run build` build command, and `.next` output directory for Vercel’s Next.js adapter. The nested `My-Portfolio-main` folder is the previous portfolio and is excluded from CLI uploads.
+   Vercel reads Next.js build manifests from `.next`. Do not configure its Next.js Output Directory as `out`; `out` is the standalone static export. If the dashboard previously had an `out` override, turn that override off or set it to `.next`.
 3. Set `NEXT_PUBLIC_SITE_URL` to the final production origin, for example `https://your-domain.com`, without a trailing slash.
 4. Deploy. If the domain changes, update the variable and redeploy.
 
