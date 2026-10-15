@@ -22,6 +22,10 @@ Verified on 14 October 2026 using Node.js 24.19.0, Next.js 16.4.0, and React 19.
 
 ## Scope and limits
 
-The supplied green template and all six provided palette colours guided the redesign. Portrait and project-image regions are deliberately blank. Decorative ribbon geometry and spheres are SVG/CSS, not fabricated work images. Personal information, project responsibilities, pending-content notes, and documented recognition are retained.
+The supplied green template and all six provided palette colours guided the redesign. The homepage portrait and project-image regions remain blank; the About page displays the uploaded internship group photo. Decorative ribbon geometry and spheres are SVG/CSS, not fabricated work images. Personal information, project responsibilities, pending-content notes, and documented recognition are retained.
 
 Automated accessibility checks do not replace a manual screen-reader audit. External social URLs were matched to the supplied brief rather than authenticated profiles. The actual resume PDF has not been provided, so no download button is displayed. This change is prepared for Vercel and runs locally; no hosting deployment was performed. Set the real `NEXT_PUBLIC_SITE_URL` before deployment for the sitemap and absolute metadata.
+
+## About photo update — 15 October 2026
+
+Converted IMG_4994.HEIC to a 1600 × 1200 WebP (approximately 109 KiB). The original group photo is shown in full without cropping. Confirmed image loading and no horizontal overflow at 375, 766, and 1440px; lint, type checks, and the production build passed.

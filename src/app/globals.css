@@ -2843,3 +2843,20 @@ dd {
     display: initial;
   }
 }
+
+/* Keep the complete uploaded group photo visible at every viewport size. */
+.profile-panel.profile-panel-with-photo {
+  min-height: 0;
+}
+.profile-photo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 27px 27px 0 0;
+}
+.profile-photo img {
+  object-fit: contain;
+}
+.profile-panel-with-photo .profile-caption {
+  position: relative;
+}

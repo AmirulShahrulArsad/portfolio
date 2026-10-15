@@ -1,5 +1,9 @@
 export const profile = {
   name: "Amirul Shahrul Bin M. Arsad",
+  aboutImage: {
+    src: "/images/profile/amirul.webp",
+    alt: "Group photo at a final internship presentation",
+  },
   email: "amirulshahrul1775@gmail.com",
   location: "Petaling Jaya, Selangor, Malaysia",
   linkedin: "https://www.linkedin.com/in/amirul-shahrul-90a680308/",

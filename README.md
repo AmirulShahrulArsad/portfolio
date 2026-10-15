@@ -45,11 +45,11 @@ The internship dates are supplied as March 2026 – Present and should be update
 
 ## Assets and content integrity
 
-All portrait and project-image areas are deliberately blank. To add approved project images, put them in `public/images/work/`, set the matching gallery `src` in `src/data/projects.ts`, and update captions and alt text. The shared Visual component automatically renders the image instead of the blank area. Do not publish proprietary client information.
+Project-image areas and the homepage portrait are deliberately blank. The About page uses the uploaded internship group photo, converted from HEIC to WebP without changing its content. Its source and alt text are configured in `src/data/profile.ts` as `aboutImage`. To add approved project images, put them in `public/images/work/`, set the matching gallery `src` in `src/data/projects.ts`, and update captions and alt text. The shared Visual component automatically renders the image instead of the blank area. Do not publish proprietary client information.
 
 Objectives, process details, outcomes, and personal learnings are pending where the brief did not provide them. Do not add invented metrics, budget ownership, client testimonials, or unsupported tool integrations. Dashboard-specific tool use remains pending confirmation. The StepWise recognition is the documented Best Presenter, Ie-RIICH 12th, 2026.
 
-No resume button is shown. Add the actual PDF under `public/resume/` before adding a download link. No portrait was supplied; the homepage and About page have empty portrait frames.
+No resume button is shown. Add the actual PDF under `public/resume/` before adding a download link. The homepage portrait remains an empty frame; the uploaded group photo is displayed in full on the About page.
 
 ## Routes and interactions
 

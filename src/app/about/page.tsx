@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { profile } from "@/data/profile";
 import { ContactCTA, TextLink } from "@/components/Shared";
 import { Reveal } from "@/components/Reveal";
@@ -16,13 +17,15 @@ export default function About() {
             <span className="serif">the resume.</span>
           </h1>
           <div className="about-story">
-            <div className="profile-panel">
-              <div
-                className="portrait-blank"
-                role="img"
-                aria-label="Portrait placeholder. Photo to be added."
-              >
-                <span>PHOTO TO BE ADDED</span>
+            <div className="profile-panel profile-panel-with-photo">
+              <div className="profile-photo">
+                <Image
+                  src={profile.aboutImage.src}
+                  alt={profile.aboutImage.alt}
+                  fill
+                  preload
+                  sizes="(max-width: 767px) calc(100vw - 36px), (max-width: 1023px) 42vw, 490px"
+                />
               </div>
               <div className="profile-caption">
                 <p>AMIRUL SHAHRUL BIN M. ARSAD</p>
